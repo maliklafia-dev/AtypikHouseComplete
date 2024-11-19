@@ -1,0 +1,23 @@
+<h2>Reservations List</h2>
+
+<div *ngFor="let reservation of reservations" class="reservation-card">
+  <p><strong>ID:</strong> {{ reservation.id }}</p>
+  <p><strong>Start Date:</strong> {{ reservation.startDate | date:'shortDate' }}</p>
+  <p><strong>End Date:</strong> {{ reservation.endDate | date:'shortDate' }}</p>
+  <p><strong>Total Price:</strong> {{ reservation.totalPrice }}€</p>
+
+
+
+  <a [routerLink]="['/reservation', reservation.id]" class="btn-view">
+    View Details
+  </a>
+
+  <a [routerLink]="['/edit-reservation', reservation.id]" class="btn-edit">
+    Edit
+  </a>
+</div>
+
+<!-- Display message if there are no reservations -->
+<div *ngIf="reservations.length === 0">
+  <p>No reservations available.</p>
+</div>

@@ -1,0 +1,63 @@
+@import url('../../../assets/css/global.css');
+@import url('../../../assets/css/home.css');
+
+.column27 {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    right: 1px;
+    gap: 25%;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+  .color-dark9 {
+    display: block;
+  }
+
+  .btn-add-appart1 {
+    display: none;
+  }
+  
+
+  @media (max-width:1200px) {
+    .color-dark9 {
+        display: none;
+      }
+    .column27 {
+        width: 30%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .color-dark9 {
+        display: none;
+      }
+    .column27 {
+        flex: 2;    
+    }
+    .btn-add-appart1 {
+        display: block;
+      }
+      .btn-add-appart {
+        display: none;
+      }
+  }
+
+  @media (max-width: 480px) {
+    .column27 {
+        flex-direction: row-reverse wrap;
+    }
+
+    .btn-add-appart1 {
+        font-size: 16px;
+      }
+
+      .btn {
+        font-size: 16px;
+        width: 140px;
+      }
+
+  }

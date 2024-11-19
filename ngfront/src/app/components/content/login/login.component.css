@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+app-login-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: flex;
+    flex-flow: column wrap;
+    background-image: url('/assets/images/loginBack.jpg');
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.91;
+    
+}

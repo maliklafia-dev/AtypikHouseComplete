@@ -1,0 +1,6 @@
+<div class="profilContainer" id="profilContainer">
+  <p>Bienvenue dans ton espace, <span class="userName">{{ userName }}</span></p>
+  <a routerLink="/profile-dashboard">Mon profil</a>
+  <a routerLink="/admin" *ngIf="isAdmin">Administration</a>
+  <a (click)="logout()">Se déconnecter</a>
+</div>

@@ -1,0 +1,39 @@
+.role-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .role-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .role-table th,
+  .role-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .role-table th {
+    background-color: #f4f4f4;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  

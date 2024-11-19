@@ -1,0 +1,9 @@
+app-register-form {
+    display: flex;
+    flex-flow: column wrap;
+    background-image: url('/assets/images/registerBack.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}

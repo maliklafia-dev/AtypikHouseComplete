@@ -1,0 +1,90 @@
+<!-- add-habitat-form.component.html -->
+<!-- add-appart-form.component.html -->
+<div class="popup" *ngIf="showPopup">
+  <div class="popup-content">
+    <p>L'appartement a bien été publié!</p>
+  </div>
+  <div class="btns">
+    <button class="styleprimary-smallfalse-da14" (click)="closePopup()">OK</button>
+    <button class="styleprimary-smallfalse-da14" (click)="closePopup()" routerLink="/list-appart">Voir</button>
+  </div>
+</div>
+
+<div class="contact-9">
+  <div class="content45">
+    <img class="placeholder-image-icon21" alt="illustration_construction_pour_ajouter_un_appart" src="../../assets/images/placeholder-image15@2x.png" />
+    <div class="content46">
+      <div class="section-title14">
+        <div class="content47">
+          <b class="short-heading-here5">Informations de base</b>
+          <div class="text36">Remplissez les informations de base de votre appartement, telles que le titre, la description et les commodités.</div>
+        </div>
+      </div>
+      <div class="form3">
+        <form (ngSubmit)="onSubmit()" #habitatForm="ngForm">
+          <div *ngIf="true" class="input13"> <!-- Tester si c'est une condition qui bloque -->
+            <label for="images" class="name">Images</label>
+            <input type="file" id="images" (change)="onFileSelected($event)" multiple>
+          </div>
+          <div class="input13">
+            <label for="titre" class="name">Titre</label>
+            <input type="text" id="titre" class="typedefault12" [(ngModel)]="habitat.title" name="titre" required />
+          </div>
+          <div class="input13">
+            <label for="categorie" class="name">Catégorie</label>
+            <select id="categorie" class="typedefault12" [(ngModel)]="habitat.category" name="category" required>
+              <option *ngFor="let category of categories" [ngValue]="category">{{ category.title }}</option>
+            </select>
+          </div>
+          <div class="input13">
+            <label for="adresse" class="name">Adresse de location</label>
+            <input type="text" id="adresse" class="typedefault12" [(ngModel)]="habitat.location" name="adresse" required />
+          </div>
+          <div class="input13">
+            <label for="personnes" class="name">Nombre de personnes</label>
+            <input type="number" id="personnes" class="typedefault12" [(ngModel)]="habitat.maxGuests" name="personnes" required />
+          </div>
+          <div class="input13">
+            <label for="equipements" class="name">Équipements</label>
+            <input type="text" id="equipements" class="typedefault12" name="equipements" [(ngModel)]="habitat.amenities" placeholder="Séparez les équipements par des virgules" />
+          </div>          
+          <div class="input13">
+            <label for="disponibilite" class="name">Disponibilité</label>
+            <input type="text" id="disponibilite" class="typedefault12" name="disponibilite" [(ngModel)]="habitat.availability"/>
+          </div>
+          <div class="input13">
+            <label for="prix" class="name">Prix par nuit</label>
+            <input type="number" id="prix" class="typedefault12" [(ngModel)]="habitat.pricePerNight" name="prix" required />
+          </div>
+          <div class="input13">
+            <label for="ville" class="name">Ville</label>
+            <input id="ville" type="text" class="typedefault12" [(ngModel)]="habitat.city" name="city" rows="4" required>
+          </div>
+          <div class="input13">
+            <label for="pays" class="name">Pays</label>
+            <input id="pays" type="text" class="typedefault12" [(ngModel)]="habitat.country" name="country" rows="4" required>
+          </div>
+          <div class="input13">
+            <label for="startDate" class="name">Date de début</label>
+            <input type="date" id="startDate" class="typedefault12" [(ngModel)]="habitat.startDate" name="startDate" required />
+          </div>
+          <div class="input13">
+            <label for="endDate" class="name">Date de fin</label>
+            <input type="date" id="endDate" class="typedefault12" [(ngModel)]="habitat.endDate" name="endDate" required />
+          </div>
+          <div class="input13">
+            <label for="description" class="name">Description</label>
+            <textarea id="description" class="text-area typedefault12" [(ngModel)]="habitat.description" name="description" rows="4" placeholder="Dites-nous tout ce qu'on doit savoir sur cet appart atypique !"></textarea>
+          </div>
+          <div class="selectedfalse2">
+            <input type="checkbox" id="conditions" class="checkbox2" name="conditions" [(ngModel)]="conditionsAccepted" required />
+            <label for="conditions" class="link-one6">J'accepte les conditions</label>
+          </div>
+          <div>
+            <button type="submit" class="styleprimary-smallfalse-da14" [disabled]="!conditionsAccepted">Ajouter</button>           
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

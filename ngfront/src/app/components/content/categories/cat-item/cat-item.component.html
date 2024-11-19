@@ -1,0 +1,9 @@
+<div class="column33" (click)="onCategoryClick(category.title)">
+  <!-- Dynamically bind the image URL -->
+  <img [src]="category.url" class="placeholder-image-icon22" alt="Category Image" (error)="category.url='path/to/fallback-image.png'" />
+
+  <div class="content52">
+    <b class="heading18">{{ category.title }}</b>
+    <div class="text38">{{ category.description }}</div>
+  </div>
+</div>

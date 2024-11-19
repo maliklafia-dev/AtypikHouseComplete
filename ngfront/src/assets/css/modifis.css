@@ -1,0 +1,69 @@
+/* Réinitialisation globale */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Conteneurs principaux */
+.container, .header, .footer, .layout, .content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ajout de responsive design */
+@media (max-width: 1200px) {
+  .container, .header, .footer, .layout, .content {
+    padding: 0;
+  }
+
+  .header {
+    height: auto;
+    background-size: cover;
+  }
+
+  .row, .column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs-menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .header, .footer, .layout, .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions, .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar, .header, .footer, .layout, .content {
+    padding: 0;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .tabs-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

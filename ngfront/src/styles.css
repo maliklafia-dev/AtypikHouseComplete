@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("assets/css/global.css");
+
+@font-face {
+    font-family: 'CovesLight';
+    src: url('assets/fonts/Coves-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

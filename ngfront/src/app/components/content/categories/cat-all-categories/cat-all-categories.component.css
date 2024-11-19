@@ -1,0 +1,21 @@
+@import url('../../../../../assets/css/global.css');
+@import url('../../../../../assets/css/home.css');
+@import url('../../../../../assets/css/categories.css');
+
+.content51, .column33 {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.column33 {
+    justify-content: space-between;
+    width: 98%;
+    margin: 10px;
+}
+
+.placeholder-image-icon22 {
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+}

@@ -1,0 +1,9 @@
+
+<div class="content51">
+    <b class="short-heading-here6">Plus de catégories</b>
+    <div class="column33" *ngFor="let category of moreCategories">
+        <b class="heading18">{{ category.title }}</b>
+        <img class="placeholder-image-icon22" [src]="category.url" alt="{{ category.title }}" width="400px" height="400px" />
+        <div class="text38">{{ category.description }}</div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="role-form-container">
+    <h2>{{ isEditMode ? 'Modifier' : 'Créer' }} un rôle</h2>
+    <form (ngSubmit)="saveRole()">
+      <label for="roleName">Nom du rôle:</label>
+      <input id="roleName" [(ngModel)]="role.roleName" name="roleName" required />
+  
+      <button type="submit">{{ isEditMode ? 'Mettre à jour' : 'Créer' }}</button>
+    </form>
+  </div>
+  

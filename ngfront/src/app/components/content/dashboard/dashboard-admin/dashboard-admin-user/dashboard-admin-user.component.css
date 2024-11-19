@@ -1,0 +1,108 @@
+/* src/app/components/admin-dashboard/admin-dashboard.component.css */
+.dashboard-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+}
+
+button {
+  margin: 2px;
+  border-radius: 14px;
+  width: 100%;
+  border-radius: var(--br-31xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  box-sizing: border-box;
+  color: var(--text-primary);
+  border: none;
+  position: relative;
+  line-height: 150%;
+}
+
+.btn-edit {
+  background-color: #db9e00;
+}
+.btn-edit:hover {
+  background-color: rgba(219, 157, 0, 0.8);
+}
+
+.btn-delete {
+  background-color: rgb(252, 66, 66);
+}
+.btn-delete:hover {
+  background-color: rgba(252, 66, 66, 0.8);
+}
+
+button:hover {
+  cursor: pointer;
+  color: whitesmoke;
+  transition: ease-in-out, 0.3s;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.logo {
+  width: 40px;
+  position: relative;
+  box-shadow: none;
+  margin-top: 20px;
+  align-self: center;
+  justify-content: center;
+  margin-left: 20px;
+  color: black;
+}
+
+@media(max-width: 1200px) {
+  .dashboard-container {
+    width: 80%;
+  }
+}
+@media(max-width: 768px) {
+  .dashboard-container {
+    width: 70%;
+  }
+  .user-table {
+    width: 80%;
+  }
+}

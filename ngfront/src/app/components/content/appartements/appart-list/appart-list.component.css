@@ -1,0 +1,232 @@
+/* habitat-list.component.css */
+
+.input-margin {
+  margin-top: 25px;
+}
+
+.habitat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.input-margin {
+  margin-top: 25px;
+}
+
+.habitat-card {
+  background-color: #fff;
+  border: none; /* Main color for border */
+  border-radius: 24px;
+  width: 30%;
+  height: 650px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.habitat-card:hover {
+  transform: translateY(-5px);
+}
+
+.habitat-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0;
+}
+
+.habitat-details {
+  padding: 15px;
+  display: flex;
+  flex-flow : column wrap;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+
+.habitat-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 90%;
+}
+
+.habitat-details p {
+  font-size: 1rem;
+  font-weight: bold; /* Added bold font weight */
+  margin: 5px 0;
+}
+
+
+/* Button styles */
+.habitat-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-self: flex-start;
+}
+
+.btn {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-commenter {
+  width: auto;
+  border-radius: var(--br-31xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  box-sizing: border-box;
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.527);
+  position: relative;
+  line-height: 150%;
+}
+
+.btn-commenter:hover {
+  cursor: pointer;
+  background-color: rgba(247, 246, 246, 0.993);
+  transition: ease-in-out, 0.3s;
+}
+
+.searchInput {
+  margin-right: 3%;
+  width: 300px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.search-field label {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 4px;
+  width: auto;
+}
+
+.search-field input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 0;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #11CF73;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+}
+
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #ff3b5f;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+  .habitat-list {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+
+  .habitat-card {
+    height: 100%;
+
+  }
+  
+  .habitat-buttons {
+    flex-flow: column-reverse wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .habitat-image {
+    height: 60%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .habitat-list {
+    width: 98%;
+  }
+  .habitat-card {
+    width: 98%;
+  }
+  .habitat-image {
+    height: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .habitat-list {
+    width: 100%;
+  }
+  .habitat-card {
+    width: 100%;
+    height: 100%;
+  }
+  .search-form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 12px;
+    width: 98%;
+  }
+  
+.search-field, .search-field label, .search-field input  {
+ width: 100%;
+}
+
+.search-button {
+  align-self: flex-end;
+}
+
+}

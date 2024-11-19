@@ -1,0 +1,84 @@
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Add some space around the content */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  line-height: 1.6; /* Better readability */
+  background-color: #f9f9f9; /* Light background for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Main Heading (H1) */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333; /* Darker text color for main heading */
+  text-align: center;
+  margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Section Headings (H2) */
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #444; /* Slightly lighter color for subheadings */
+  margin-top: 40px; /* Space above each section */
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.1rem;
+  color: #555; /* Mid-grey color for body text */
+  margin-bottom: 20px; /* Space below each paragraph */
+  text-align: justify; /* Justify text for clean alignment */
+}
+
+/* Links */
+a {
+  color: #007BFF; /* Use a blue color for links */
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Strong Text */
+strong {
+  font-weight: 700;
+  color: #222; /* Slightly darker for emphasis */
+}
+
+/* List styling (if applicable) */
+ul {
+  padding-left: 40px; /* Indentation for lists */
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

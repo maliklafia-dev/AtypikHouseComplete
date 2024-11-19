@@ -1,0 +1,8 @@
+<div *ngIf="role">
+    <h2>Détails du rôle</h2>
+    <p>ID: {{ role.id }}</p>
+    <p>Nom: {{ role.roleName }}</p>
+    <p>Créé le: {{ role.createdAt | date }}</p>
+    <p>Mis à jour le: {{ role.updatedAt | date }}</p>
+  </div>
+  

@@ -1,0 +1,37 @@
+<!-- src/app/components/auth/login-form/login-form.component.html -->
+<a routerLink="/"><img src="../../../../../assets/images/back-arrow-direction-down-right-left-up-svgrepo-com.svg" alt="backIcon"  height="80px" class="logo"></a>
+<div class="container">
+  <h1 class="heading">Connectez-vous</h1>
+  <div class="text">
+    <span>Connectez-vous ou </span>
+    <a routerLink="/register"><span class="inscrivez-vous">inscrivez-vous</span></a>
+     en tant que propriétaire ou locataire
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="credentials.email"
+      name="email"
+      placeholder="Email"
+      required
+    />
+
+    <label for="password">Mot de passe</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="credentials.password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+
+    <button type="submit">Se connecter</button>
+
+    <!-- Error Message Display -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+</div> 

@@ -1,0 +1,16 @@
+<ng-container *ngIf="!isLoggedIn && showHeaderFooter">
+  <!-- Affiche la navbar pour les utilisateurs non connectés -->
+  <app-navbar-main></app-navbar-main>
+</ng-container>
+
+<ng-container *ngIf="isLoggedIn && showHeaderFooter">
+  <!-- Affiche la navbar pour les utilisateurs connectés -->
+  <app-navbar-connected></app-navbar-connected>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="showHeaderFooter">
+  <!-- Footer commun à toutes les pages -->
+  <app-footer-main></app-footer-main>
+</ng-container>

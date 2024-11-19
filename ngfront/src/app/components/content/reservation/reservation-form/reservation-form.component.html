@@ -1,0 +1,35 @@
+<h2>{{ isEditMode ? 'Edit Reservation' : 'Create Reservation' }}</h2>
+
+<form (ngSubmit)="saveReservation()">
+  <!-- Start Date -->
+  <label for="startDate">Start Date:</label>
+  <input [(ngModel)]="reservation.startDate" name="startDate" type="date" required />
+
+  <!-- End Date -->
+  <label for="endDate">End Date:</label>
+  <input [(ngModel)]="reservation.endDate" name="endDate" type="date" required />
+
+  <!-- Total Price -->
+  <label for="totalPrice">Total Price:</label>
+  <input [(ngModel)]="reservation.totalPrice" name="totalPrice" type="number" required />
+
+  <!-- User (Dropdown) -->
+  <label for="user">User:</label>
+  <select [(ngModel)]="reservation.user" name="user" required>
+    <option *ngFor="let user of users" [ngValue]="user">{{ user.firstName }}</option>
+  </select>
+
+  <!-- Habitat (Dropdown) -->
+  <label for="habitat">Habitat:</label>
+  <select [(ngModel)]="reservation.habitat" name="habitat" required>
+    <option *ngFor="let habitat of habitats" [ngValue]="habitat">{{ habitat.title }}</option>
+  </select>
+
+  <!-- Status (Dropdown) -->
+  <label for="status">Status:</label>
+  <select [(ngModel)]="reservation.status" name="status" required>
+    <option *ngFor="let status of statuses" [ngValue]="status">{{ status.title }}</option>
+  </select>
+
+  <button type="submit">{{ isEditMode ? 'Update Reservation' : 'Create Reservation' }}</button>
+</form>

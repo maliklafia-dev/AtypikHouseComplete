@@ -1,0 +1,84 @@
+<div class="input-margin"></div>
+
+<!-- Barre de recherche -->
+
+<div class="search-form">
+  <div class="search-field">
+    <label for="destination">Destination</label>
+    <input
+      id="destination"
+      type="text"
+      [(ngModel)]="searchData.destination"
+      placeholder="Rechercher une destination"
+    />
+  </div>
+
+  <div class="search-field">
+    <label for="arrival">Arrivée</label>
+    <input
+      id="arrival"
+      type="date"
+      [(ngModel)]="searchData.arrival"
+    />
+  </div>
+
+  <div class="search-field">
+    <label for="departure">Départ</label>
+    <input
+      id="departure"
+      type="date"
+      [(ngModel)]="searchData.departure"
+    />
+  </div>
+
+  <button class="search-button" (click)="onSearch()"><i class="fa fa-search"></i></button>
+</div>
+
+<div class="input-margin"></div>
+
+<div class="search">
+  <input class="searchInput" type="text" [(ngModel)]="searchTerm" (input)="filterHabitats()" placeholder="mot clé de votre habitat...">
+</div> 
+
+<!-- Liste des habitats -->
+<div class="habitat-list">
+  <div class="habitat-card" *ngFor="let habitat of filteredHabitats" (click)="viewHabitat(habitat.id)">
+    
+    <!-- Image de l'habitat (première image ou placeholder) -->
+    <img
+      [src]="imageUrls[habitat.id] || 'assets/images/placeholder-image7@2x.png'"
+      alt="Habitat Image"
+      class="habitat-image" height="500px" width="500px">
+    
+    <div class="habitat-details">
+      <h2>{{ habitat.title }}</h2>
+      <p><span class="features">Ville:</span> {{ habitat.city }}</p>
+      <p><span class="features">Prix:</span> {{ habitat.pricePerNight }}€</p>
+      <p><span class="features">Personne max</span> {{ habitat.maxGuests }}</p>
+      <p>
+        <span class="features">Période :</span>
+        {{ habitat.startDate | date:'shortDate' }} - {{ habitat.endDate | date:'shortDate' }}
+      </p>
+    </div>
+
+    <!-- Boutons pour réserver, voir plus et commenter -->
+    <div class="habitat-buttons">
+      <!-- <button 
+        class="btn btn-primary styleprimary-smallfalse-da14" 
+        (click)="startCheckout(habitat.title, habitat.pricePerNight)" 
+        [disabled]="loading">
+        Réserver
+      </button> -->
+      <button 
+        class="btn btn-primary styleprimary-smallfalse-da14" 
+        (click)="viewHabitat(habitat.id)">
+        Voir +
+      </button>
+      <button 
+        class="btn btn-commenter" 
+        (click)="viewComments(habitat.id)">
+        Commenter
+      </button>
+    </div>
+  </div>
+</div>

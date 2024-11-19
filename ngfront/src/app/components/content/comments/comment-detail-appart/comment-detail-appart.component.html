@@ -1,0 +1,34 @@
+<!-- habitat-list.component.html -->
+<div class="bg-gray-100 dark:bg-gray-800 py-8" *ngIf="habitat">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row -mx-4">
+
+      <!-- Habitat Card -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-red-500 ring-opacity-40 max-w-sm mx-auto">
+
+        <!-- Main Image with Sale Tag -->
+        <div class="relative">
+          <img class="w-full" [src]="habitat.images[0]?.url || 'assets/images/placeholder-image16@2x.png'" alt="Habitat Image">
+          <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">NEW</div>
+        </div>
+
+        <!-- Habitat Details -->
+        <div class="p-4">
+          <h3 class="text-lg font-medium mb-2">{{ habitat.title }}</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">{{ habitat.description }}</p>
+
+          <div class="flex items-center justify-between">
+            <!-- Price and Maximum Guests -->
+            <span class="font-bold text-lg">{{ habitat.pricePerNight }}€</span>
+            <span class="text-gray-600 dark:text-gray-400 text-sm">{{ habitat.maxGuests }} max pers.</span>
+          </div>
+
+          <div class="flex items-center justify-between mt-4">
+            <span class="text-gray-600 dark:text-gray-400">{{ habitat.city }}</span>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Réserver</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

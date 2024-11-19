@@ -1,0 +1,72 @@
+<div class="habitat-container" *ngIf="habitat">
+  <div class="habitat-wrapper">
+    <div class="habitat-flex-container">
+
+      <!-- Main Image and Buttons -->
+      <div class="habitat-main-image-container">
+        <a routerLink="/list-appart" class="back">
+          <img src="../../../../../../assets/images/back-arrow-direction-down-right-left-up-svgrepo-com_Black.svg" height="80px" class="logo">
+        </a>
+        <div class="habitat-image">
+          <img class="habitat-img"
+               [src]="images[currentImageIndex] || 'assets/images/placeholder-image7@2x.png'"
+               alt="Habitat Image">
+        </div>
+        <div class="carousel-navigation">
+          <button class="carousel-button prev" (click)="previousImage()">&#10094;</button>
+          <button class="carousel-button next" (click)="nextImage()">&#10095;</button>
+        </div>
+        <div class="habitat-buttons">
+          <div class="button-container">
+            <!-- <button class="btn-primary styleprimary-smallfalse-da14 btn" routerLink="/checkout">Réserver</button> -->
+            <button class="btn-primary styleprimary-smallfalse-da14 btn" (click)="goToReservation()">Réserver</button>
+          </div>
+          <div class="button-container">
+            <button class="btn-commenter btn-secondary btn " routerLink="/comments/:id">Commenter</button>
+          </div>
+          <div class="button-container">
+            <button class="btn-commenter btn-secondary btn" routerLink="/contact">Contacter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Habitat Details -->
+      <div class="habitat-details-container">
+        <h2 class="habitat-title">{{ habitat.title }}</h2>
+        <p class="habitat-description">{{ habitat.description }}</p>
+        <div class="habitat-details">
+          <div class="habitat-price">
+            <span class="habitat-price-label">Prix: </span>
+            <span class="habitat-price-value">{{ habitat.pricePerNight }}€</span>
+          </div>
+          <div class="habitat-max-guests">
+            <span class="habitat-max-guests-label">Max Personnes: </span>
+            <span class="habitat-max-guests-value">{{ habitat.maxGuests }}</span>
+          </div>
+        </div>
+
+        <!-- Additional Details -->
+         <div class="detailAditionnel">
+           <div class="habitat-amenities">
+             <span class="habitat-amenities-label">Accessoires: </span>
+             <span   class="habitat-amenities-list"> {{ habitat.amenities.join(', ') }} </span>
+           </div>
+           <div class="habitat-availability">
+             <span class="habitat-availability-label">Dates de disponibilité: </span>
+             <span class="habitat-availability-value"> {{ habitat.startDate | date:'shortDate' }} - {{ habitat.endDate | date:'shortDate' }}</span>
+           </div>
+
+           <!-- Location -->
+           <div class="habitat-location">
+             <span class="habitat-location-label">Ville:</span>
+             <span class="habitat-location-value"> {{ habitat.city }} </span>
+           </div>
+           <div class="habitat-country">
+             <span class="habitat-country-label">Pays:</span>
+             <span class="habitat-country-value"> {{ habitat.country }} </span>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<h2>Reservation Details</h2>
+
+<div *ngIf="reservation">
+  <p><strong>ID:</strong> {{ reservation.id }}</p>
+  <p><strong>Start Date:</strong> {{ reservation.startDate }}</p>
+  <p><strong>End Date:</strong> {{ reservation.endDate }}</p>
+  <p><strong>Total Price:</strong> {{ reservation.totalPrice }}€</p>
+  <p><strong>User:</strong> {{ reservation.user.lastName }}</p>
+  <p><strong>Habitat:</strong> {{ reservation.habitat.title }}</p>
+  <p><strong>Status:</strong> {{ reservation.status.title }}</p>
+</div>

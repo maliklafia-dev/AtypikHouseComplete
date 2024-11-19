@@ -1,0 +1,135 @@
+<!-- src/app/components/auth/register-form/register-form.component.html -->
+<a routerLink="/">
+  <img src="../../../../../assets/images/back-arrow-direction-down-right-left-up-svgrepo-com.svg" alt="backIcon" height="80px" class="logo">
+</a>
+
+<div class="register-container">
+  <div class="head">
+    <h2>Inscrivez-vous</h2>
+    <p><a routerLink="/login" class="connection">Connectez-vous</a> ou inscrivez-vous en tant que propriétaire ou locataire</p>
+  </div>
+
+  <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+    <!-- First Name -->
+    <label for="firstName">Prénom</label>
+    <input
+      type="text"
+      id="firstName"
+      [(ngModel)]="user.firstName"
+      name="firstName"
+      placeholder="Entrez votre prénom"
+      required
+      minlength="2"
+      maxlength="50"
+      #firstName="ngModel"
+    />
+    <div *ngIf="firstName.invalid && firstName.touched" class="error">
+      <span *ngIf="firstName.errors?.['required']">Le champ prénom est obligatoire.</span>
+      <span *ngIf="firstName.errors?.['minlength']">Le prénom doit contenir au moins 2 caractères.</span>
+      <span *ngIf="firstName.errors?.['maxlength']">Le prénom ne doit pas dépasser 50 caractères.</span>
+    </div>
+
+    <!-- Last Name -->
+    <label for="lastName">Nom</label>
+    <input
+      type="text"
+      id="lastName"
+      [(ngModel)]="user.lastName"
+      name="lastName"
+      placeholder="Entrez votre nom"
+      required
+      minlength="2"
+      maxlength="50"
+      #lastName="ngModel"
+    />
+    <div *ngIf="lastName.invalid && lastName.touched" class="error">
+      <span *ngIf="lastName.errors?.['required']">Le champ nom est obligatoire.</span>
+      <span *ngIf="lastName.errors?.['minlength']">Le nom doit contenir au moins 2 caractères.</span>
+      <span *ngIf="lastName.errors?.['maxlength']">Le nom ne doit pas dépasser 50 caractères.</span>
+    </div>
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="user.email"
+      name="email"
+      placeholder="Entrez votre email"
+      required
+      #email="ngModel"
+    />
+    <div *ngIf="email.invalid && email.touched" class="error">
+      <span *ngIf="email.errors?.['required']">Le champ email est obligatoire.</span>
+      <span *ngIf="email.errors?.['email']">L'adresse email n'est pas valide.</span>
+    </div>
+
+    <!-- Phone Number -->
+    <label for="phoneNumber">Numéro de téléphone</label>
+    <input
+      type="tel"
+      id="phoneNumber"
+      [(ngModel)]="user.phoneNumber"
+      name="phoneNumber"
+      placeholder="Entrez votre numéro de téléphone"
+      pattern="^(\+\d{1,3}[- ]?)?\d{10}$"
+      required
+      #phoneNumber="ngModel"
+    />
+    <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class="error">
+      <span *ngIf="phoneNumber.errors?.['required']">Le champ numéro de téléphone est obligatoire.</span>
+      <span *ngIf="phoneNumber.errors?.['pattern']">Veuillez saisir un numéro de téléphone valide (ex. : 0612345678).</span>
+    </div>
+
+    <!-- Password -->
+    <label for="password">Mot de passe</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="user.password"
+      name="password"
+      placeholder="Entrez votre mot de passe"
+      required
+      minlength="8"
+      #password="ngModel"
+    />
+    <div *ngIf="password.invalid && password.touched" class="error">
+      <span *ngIf="password.errors?.['required']">Le champ mot de passe est obligatoire.</span>
+      <span *ngIf="password.errors?.['minlength']">Le mot de passe doit contenir au moins 8 caractères.</span>
+    </div>
+
+    <!-- Confirm Password -->
+    <label for="reTypePassword">Confirmer le mot de passe</label>
+    <input
+      type="password"
+      id="reTypePassword"
+      [(ngModel)]="user.reTypePassword"
+      name="reTypePassword"
+      placeholder="Confirmez votre mot de passe"
+      required
+      #reTypePassword="ngModel"
+    />
+    <div *ngIf="reTypePassword.invalid && reTypePassword.touched" class="error">
+      <span *ngIf="reTypePassword.errors?.['required']">Le champ de confirmation de mot de passe est obligatoire.</span>
+    </div>
+    <div *ngIf="user.password !== user.reTypePassword && reTypePassword.touched" class="error">
+      Les mots de passe ne sont pas identiques.
+    </div>
+
+    <!-- Role -->
+    <label for="role">Je suis</label>
+    <select class="typedefault6" name="role" id="role" [(ngModel)]="selectedRole" required>
+      <option class="iconfalse1" value="ROLE_USER">Locataire</option>
+      <option class="iconfalse1" value="ROLE_OWNER">Propriétaire</option>
+    </select>
+    <div *ngIf="!selectedRole && registerForm.submitted" class="error">
+      Veuillez sélectionner un rôle.
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="registerForm.invalid">S'inscrire</button>
+
+    <!-- Error Message Display -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+</div>

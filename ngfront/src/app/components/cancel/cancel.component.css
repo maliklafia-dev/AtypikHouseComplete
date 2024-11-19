@@ -1,0 +1,17 @@
+* {
+    font-family: Poppins;
+}
+
+.cancel-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,35 @@
+<div class="navbar-36">
+  <div class="container19">
+    <!-- Burger menu -->
+    <button type="button" class="header__nav-toggler" (click)="toggleMenu()" [ngClass]="{'active': isMenuActive}">
+      <span class="line l1"></span>
+      <span class="line l2"></span>
+      <span class="line l3"></span>
+    </button>
+    <div class="column25">
+      <div class="column26 column61" [ngClass]="{'active': isMenuActive}">
+        <div class="link-one6"><a routerLink="/" (click)="closeMenu()">Accueil</a></div>
+        <div class="link-one6"><a routerLink="/list-appart" (click)="closeMenu()">Nos habitats</a></div>
+        <div class="nav-link-dropdown6">
+          <div class="link-one6"><a routerLink="/cat" (click)="closeMenu()">Categories</a></div>
+        </div>
+        <div class="link-one15"><a routerLink="/our-services" (click)="closeMenu()">Découvrir nos services</a></div>
+      </div>
+    </div>
+    <a routerLink="/add-appart"><button class="styleprimary-smallfalse-da14 btn-primary btn-add-appart1">Publier un habitat</button></a>
+    
+    <div>
+      <a href="index.html"><img class="color-dark9" alt="logo_atypikHouse" src="../../assets/images/logo.jpeg" width="80px" height="80px" /></a>
+    </div>
+    <div class="column27">
+      <a routerLink="/add-appart"><button class="styleprimary-smallfalse-da14 btn-primary btn-add-appart">Publier un habitat</button></a>
+      <!-- Ajout de l'événement click sur l'icône de profil -->
+      <img class="iconamoonprofile-duotone2" alt="icon_profil" src="../../assets/images/iconamoonprofileduotone.svg" id="profilIcon" (click)="toggleProfilePopup()" />
+    </div>
+  </div>
+</div>
+
+<!-- Ajout du composant profil sous forme de popup -->
+<div *ngIf="showProfilePopup" class="profile-popup">
+  <app-profile></app-profile>
+</div>

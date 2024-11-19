@@ -1,0 +1,54 @@
+<!-- src/app/components/admin-dashboard/admin-dashboard.component.html -->
+
+<div class="dashboard-container">
+  <a routerLink="/admin"><img src="../../../../../../assets/images/back-arrow-direction-down-right-left-up-svgrepo-com_Black.svg"  height="80px" class="logo"></a>
+  <h2>Gestion des utilisateurs</h2>
+
+  <!-- User List -->
+  <table class="user-table">
+    <thead>
+    <tr>
+      <th>Prénoms</th>
+      <th>Noms</th>
+      <th>Email</th>
+      <th>Numéros de téléphone</th>
+      <th>Roles</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phoneNumber }}</td>
+      <td>{{ user.roles.join(', ') }}</td>
+      <td>
+        <button class="btn-edit " (click)="editUser(user)">Edit</button>
+        <button class="btn-delete" (click)="deleteUser(user.id!)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Create / Edit User Form -->
+  <div *ngIf="editingUser">
+    <h2>{{ editMode ? 'Edit User' : 'Create User' }}</h2>
+    <form (ngSubmit)="saveUser()">
+      <label>Prénoms:</label>
+      <input type="text" [(ngModel)]="editingUser.firstName" name="firstName" required>
+
+      <label>Noms:</label>
+      <input type="text" [(ngModel)]="editingUser.lastName" name="lastName" required>
+
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="editingUser.email" name="email" required>
+
+      <label>Roles:</label>
+      <input type="text" [(ngModel)]="editingUser.roles" name="roles" required>
+
+      <button type="submit" class="btn-edit">{{ editMode ? 'Update' : 'Create' }}</button>
+      <button type="button" class="btn-delete" (click)="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+</div>

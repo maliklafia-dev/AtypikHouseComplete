@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="titre">
+    <h2>Réservez votre habitat</h2>
+  </div>
+  <div class="habitat-details">
+    <div class="infos">
+      <div *ngIf="habitat">
+        <b class="heading12">{{ habitat?.title }}</b>
+        <p class="text24">
+          {{ habitat?.description }}
+        </p>
+        <b class="subheading-one1">Caractéristiques</b>
+        <p class="text25">
+          <span class="habitat-price-label">Prix: </span>
+          <span class="habitat-price-value" *ngIf="habitat"
+            >{{ habitat.pricePerNight }}€</span
+          >
+          <br />
+
+          <span class="habitat-max-guests-label">Max Personnes: </span>
+          <span class="habitat-max-guests-value">{{ habitat.maxGuests }}</span
+          ><br />
+
+          <span class="habitat-max-guests-label"
+            >Période de disponibilité:
+          </span>
+          {{ habitat.startDate | date : "shortDate" }} -
+          {{ habitat.endDate | date : "shortDate" }}
+        </p>
+
+        <b class="subheading-one1">Commodités</b>
+        <p class="text25">
+          <span class="habitat-amenities-list">
+            {{ habitat.amenities.join(", ") }}
+          </span>
+        </p>
+      </div>
+
+      <div class="reservation">
+        <form (ngSubmit)="makeReservation()">
+          <div class="input-group">
+            <label for="startDate">Date d'arrivée </label>
+            <input
+              [(ngModel)]="reservation.startDate"
+              name="startDate"
+              type="date"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="endDate">Date de départ </label>
+            <input
+              [(ngModel)]="reservation.endDate"
+              name="endDate"
+              type="date"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="styleprimary-smallfalse-da14 btn-primary"
+          >
+            Confirmer la réservation
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="habitat-main-image-container">
+      <div class="habitat-image">
+        <img
+          class="habitat-img"
+          [src]="
+            images[currentImageIndex] ||
+            'assets/images/placeholder-image7@2x.png'
+          "
+          alt="Habitat Image"
+        />
+      </div>
+      <div class="carousel-navigation">
+        <button class="carousel-button prev" (click)="previousImage()">
+          &#10094;
+        </button>
+        <button class="carousel-button next" (click)="nextImage()">
+          &#10095;
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

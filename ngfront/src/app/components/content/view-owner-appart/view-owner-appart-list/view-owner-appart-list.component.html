@@ -1,0 +1,20 @@
+<div class="grid-list-1">
+  <div class="breakpoint-desktop">
+    <div class="column3">
+      <b class="heading1">Liste des appartements loués</b>
+      <div class="description">
+        Modifiez, supprimez, ou marquez un appartement comme non disponible.
+      </div>
+    </div>
+    <div class="search">
+      <input class="searchInput" type="text" placeholder="Rechercher une location">
+      <button class="styleprimary-smallfalse-da14 btn-primary">Rechercher</button>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="row1">
+
+      <app-view-owner-appart-card *ngFor="let apartment of apartments" [apartment]="apartment"></app-view-owner-appart-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.cookie {
+    position: fixed;
+    margin: 0 auto;
+    top: 30%;
+    left: 30%;
+    display: none; /* Le popup est caché par défaut */
+    flex-flow: column wrap;
+    gap: var(--gap-5xl);
+    width: 500px;
+    height: auto;
+    background-color: white;
+    color: var(--text-primary);
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--text-medium-semi-bold);
+    font-family: Poppins;
+}
+
+#cookie-consent-popup.active {
+    display: none; /* L'élément est complètement caché lorsqu'il a la classe active */
+}
+
+.actionCookie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .cookie {
+        top: 45%;
+        left: 10%;
+    }
+}
+@media (max-width: 480px) {
+    .cookie {
+        width: 400px;
+    }
+
+    .actionCookie {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .actionCookie:first-child {
+        align-self: start;
+    }
+    
+}

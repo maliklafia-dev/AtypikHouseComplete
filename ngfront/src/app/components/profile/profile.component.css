@@ -1,0 +1,40 @@
+@import url('../../../assets/css/global.css');
+@import url('../../../assets/css/home.css');
+@import url('../../../assets/css/add-appart-appart.css');
+@import url('../../../assets/css/modifis.css');
+
+.profilContainer {
+    background-color: whitesmoke;  /* Pour voir clairement le conteneur */
+    color: black; 
+    border:none; 
+    border-radius: 14px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;  /* Mettre un z-index élevé pour s'assurer que le popup est bien visible */
+    color: black !important;  /* Forcer la couleur du texte */
+    visibility: visible !important;  /* Forcer la visibilité */
+    opacity: 1 !important;  /* Forcer l'opacité */
+    transition: ease-in-out 0.3s;
+    
+  }
+  
+  .userName {
+    color: var(--color-brand-vert);  /* Couleur rouge pour tester si le texte est visible */
+    font-weight: bold;
+  }
+  
+  .profilContainer a {
+    color: blue;  /* Couleur des liens en bleu */
+    text-decoration: none;
+    font-size: 16px;  /* Taille des liens */
+  }
+  
+  .profilContainer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .profilContainer p {
+    margin: 10px 0;
+  }
+  

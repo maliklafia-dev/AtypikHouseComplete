@@ -1,0 +1,11 @@
+<!-- src/app/components/stripe-checkout/stripe-checkout.component.html -->
+ <div class="container">
+    
+ </div>
+<div class="stripe-checkout-container  ">
+  <h1>Cliquez pour </h1>
+  <button (click)="startCheckout()" [disabled]="loading" class="btn-primary btn styleprimary-smallfalse-da14">
+    {{ loading ? 'Patientez...' : 'Effectuer le paiement' }}
+  </button>
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>

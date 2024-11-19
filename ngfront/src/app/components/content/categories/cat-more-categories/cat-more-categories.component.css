@@ -1,0 +1,6 @@
+@import url('../../../../../assets/css/global.css');
+@import url('../../../../../assets/css/categories.css');
+
+.relume-all-rights:hover {
+    color:  black;
+}

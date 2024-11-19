@@ -1,0 +1,21 @@
+<!-- category-list.component.html -->
+<div class="layout-249">
+  <div class="section-title16">
+    <div class="subheading">Filtrer</div>
+    <div class="content50">
+      <b class="short-heading-here6" id="category">Catégories d' habitats</b>
+      <div class="lorem-ipsum-dolor12">
+        Explorez notre large sélection d'habitats uniques et alternatifs, en harmonie avec la nature.
+      </div>
+    </div>
+  </div>
+  <div class="search">
+    <!-- Enregistre la saisie et applique le filtre automatiquement -->
+    <input class="searchInput" type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Rechercher une catégorie">
+  </div>
+  <div class="content51">
+    <div class="row6">
+      <app-cat-item *ngFor="let category of filteredThreeCategories" [category]="category"></app-cat-item>
+    </div>
+  </div>
+</div>

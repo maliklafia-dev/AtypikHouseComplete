@@ -1,0 +1,28 @@
+<!-- navbar.component.html -->
+<div class="navbar-311">
+  <div class="container30">
+    <button type="button" class="header__nav-toggler" (click)="toggleMenu()" [ngClass]="{'active': isMenuActive}">
+      <span class="line l1"></span>
+      <span class="line l2"></span>
+      <span class="line l3"></span>
+    </button>
+    <div class="column60">
+      <div class="column61" [ngClass]="{'active': isMenuActive}">
+        <div class="link-one15"><a routerLink="/" (click)="closeMenu()">Accueil</a></div>
+        <div class="link-one15"><a routerLink="/list-appart" (click)="closeMenu()">Nos habitats</a></div>
+        <div class="nav-link-dropdown11">
+          <div class="link-one15"><a routerLink="/cat" (click)="closeMenu()">Categories</a></div>
+        </div>
+        <div class="link-one15"><a routerLink="/our-services"  (click)="closeMenu()">Découvrir nos services</a></div>
+      </div>
+    </div>
+    <a routerLink="/add-appart"><button class="styleprimary-smallfalse-da14 btn-primary btn-add-appart1">Publier un habitat</button></a>
+    <div class="content108">
+      <a routerLink="/"><img class="color-dark9" alt="logo_atypikHouse" src="../../../../assets/images/logo.jpeg" width="80px" height="80px" /></a>
+    </div>
+    <div class="column62 column27">
+      <a routerLink="/add-appart"><button class="styleprimary-smallfalse-da14 btn-primary btn-add-appart">Publier un habitat</button></a>
+      <a routerLink="/login"><button class="styleprimary-smallfalse-da14 btn-primary btn">Se connecter</button></a>
+    </div>
+  </div>
+</div>

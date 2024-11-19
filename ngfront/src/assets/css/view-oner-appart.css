@@ -1,0 +1,387 @@
+.link-one {
+  position: relative;
+  line-height: 150%;
+}
+.chevron-down-icon {
+  width: 1.333rem;
+  position: relative;
+  height: 1.333rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.nav-link-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-9xs);
+}
+.column1 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+/* .color-dark {
+  width: 3.5rem;
+  position: relative;
+  height: 1.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+} */
+.content1 {
+  width: 9.111rem;
+  height: 4.444rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: url("../../assets/images/content@3x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.iconamoonprofile-duotone {
+  width: 3.611rem;
+  position: relative;
+  height: 3rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.column2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-13xl);
+}
+.navbar-3 {
+  width: 100%;
+  background-color: var(--background-color-primary);
+  border-bottom: 1px solid var(--text-primary);
+  box-sizing: border-box;
+  height: 4rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem var(--padding-45xl);
+}
+.short-heading-here {
+  align-self: stretch;
+  position: relative;
+  line-height: 90%;
+}
+.lorem-ipsum-dolor {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--text-medium-semi-bold-size);
+  line-height: 150%;
+}
+.content2 {
+  width: 42.667rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.header-46 {
+  width: 80rem;
+  background-color: var(--background-color-primary);
+  height: 10.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-93xl) var(--padding-45xl);
+  box-sizing: border-box;
+  font-size: var(--heading-desktop-h1-size);
+  margin-top: 5rem;
+}
+.heading1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 140%;
+}
+.description {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--text-regular-link-size);
+  line-height: 150%;
+}
+.column3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.styleprimary-smalltrue-dar {
+  border-radius: var(--br-31xl);
+  background-color: var(--color-brand-vert);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-xl);
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.styletertiary-smalltrue-da {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs);
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--gap-base);
+  font-size: var(--text-regular-link-size);
+
+}
+.breakpoint-desktop {
+  align-self: stretch;
+  background-color: var(--background-color-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0rem 0rem var(--padding-5xl);
+  gap: var(--gap-5xl);
+}
+.placeholder-image-icon {
+  width: 4.444rem;
+  position: relative;
+  border-radius: var(--br-21xl);
+  height: 4.444rem;
+  object-fit: cover;
+}
+.full-name {
+  align-self: stretch;
+  position: relative;
+  line-height: 150%;
+  font-weight: 600;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1.333rem;
+  flex-shrink: 0;
+}
+.job-title {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--text-small-link-size);
+  line-height: 150%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1.333rem;
+  flex-shrink: 0;
+}
+.title {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 150%;
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+.stylesecondary-smalltrue-d {
+  flex: 1;
+  border-radius: var(--br-31xl);
+  border: 1px solid var(--text-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-xl);
+}
+.actions1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) 0rem 0rem;
+  text-align: left;
+}
+.content3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.card {
+  flex: 1;
+  background-color: var(--background-color-primary);
+  border: 1px solid var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xl);
+  gap: var(--gap-5xl);
+  min-height: 350px;
+}
+.row1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-5xl);
+}
+.container1 {
+  width: 100%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  text-align: center;
+  font-size: var(--text-regular-link-size);
+}
+.grid-list-1 {
+  width: 80rem;
+  background-color: var(--background-color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--heading-desktop-h5-size);
+}
+.consulter-les-appart-mis-en-lo1 {
+  width: 100%;
+  position: absolute;
+  top: 0rem;
+  /*left: 0rem;*/
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.consulter-les-appart-mis-en-lo {
+  display: flex;
+  flex: column wrap;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  height: 68.167rem;
+  text-align: left;
+  font-size: var(--text-regular-link-size);
+  color: var(--text-primary);
+  font-family: Poppins;
+}
+
+/*Modifications*/
+/* Conteneurs principaux */
+.navbar-3, .header-46, .grid-list-1 {
+  width: 100%; /* Assure que les conteneurs prennent toute la largeur de l'écran */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Ajout d'un padding pour respirer sur les côtés */
+  box-sizing: border-box;
+}
+
+/* Cartes des appartements */
+.card {
+  width: 100%; /* Assure que les cartes prennent toute la largeur disponible */
+  max-width: 30rem; /* Limite la largeur maximale pour les grands écrans */
+  margin-bottom: 20px;
+}
+
+/* Images des appartements */
+.placeholder-image-icon {
+  width: 100px; /* L'image prend toute la largeur de la carte */
+  height: 100px; /* Hauteur automatique pour préserver le ratio de l'image */
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-3, .header-46, .grid-list-1 {
+    padding: 0 10px; /* Réduit le padding sur les tablettes */
+  }
+
+  .row1 {
+    flex-direction: column; /* Empile les cartes sur les écrans moyens */
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-3, .header-46, .grid-list-1 {
+    padding: 0 5px; /* Réduit encore le padding sur les petits écrans */
+  }
+
+  .content2 {
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+  }
+
+  .breakpoint-desktop {
+    flex-flow: column wrap;
+  }
+
+  .card {
+    max-width: 100%; /* Assure que les cartes prennent toute la largeur sur mobile */
+    align-self: center;
+  }
+
+  .container1 {
+    width: 85%;
+  }
+  .row1 {
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

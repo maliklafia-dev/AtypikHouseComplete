@@ -1,0 +1,293 @@
+@import url('../../../../assets/css/global.css');
+* {
+  font-family: Poppins;
+}
+.habitat-container {
+  background-color: #f3f4f6;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.habitat-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.habitat-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  width: 30px;
+}
+
+
+.habitat-image {
+  height: 460px;
+  background-color: #d1d5db;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.habitat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.habitat-buttons {
+  display: flex;
+  margin: -0.5rem 0 1rem;
+}
+
+.button-container {
+  width: 50%;
+  padding: 0 0.5rem;
+}
+
+.button {
+  width: 100%;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+}
+
+.button-green {
+  background-color: #16a34a;
+}
+
+.button-green:hover {
+  background-color: #15803d;
+}
+
+.habitat-details-container {
+  flex: 1;
+  padding: 0 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  
+}
+
+.habitat-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0px 2rem 0rem;
+}
+
+.detailAditionnel {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+}
+
+.habitat-description {
+  color: #4b5563;
+  font-size: 1rem;
+  margin: 0rem 0px 2rem 0rem;
+}
+
+.habitat-title, .habitat-description,
+ .habitat-price-label, .habitat-max-guests-label,
+  .habitat-amenities-label, .habitat-availability-label,
+   .habitat-location-label, .habitat-country-label {
+    font-weight: 600;
+   }
+
+.carousel-navigation {
+position: absolute;
+top: 50%;
+width: 90%;
+display: flex;
+justify-content: space-between;
+transform: translateY(-50%);
+}
+
+.carousel-button {
+  background-color: rgba(46, 45, 45, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+  width: 40px;
+  position: relative;
+  box-shadow: none;
+  margin-top: 20px;
+  align-self: center;
+  justify-content: center;
+  margin-left: 20px;
+  color: black;
+}
+
+
+.infos {
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.reservation {
+  display: flex;
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+
+/* Input field styling */
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Focused input fields */
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form button {
+  width: 100%;
+}
+
+.habitat-details {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  padding: var(--padding-xs);
+  width: 100vw;
+}
+
+.habitat-main-image-container {
+  flex: 1;
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 25px;
+  width: 30%;
+}
+
+.reservation {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.titre {
+  margin: 100px 0px 100px 0px;
+  font-size: 2.5rem;
+  align-self: center;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 50%;
+}
+
+.container {
+  padding: var(--padding-xs) var(--padding-xs);
+}
+
+@media (max-width: 768px) {
+  .habitat-details {
+    flex-flow: column-reverse wrap;
+  }
+  .habitat-main-image-container {
+    width: 70%;
+    align-self: center;
+  }
+
+  .infos {
+    align-self: center;
+    width: 100%;
+  }
+
+  .habitat-flex-container {
+    flex-direction: column wrap;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .habitat-container {
+    flex-flow: column wrap;
+    width: 98%;
+  }
+  .habitat-main-image-container {
+    width: 100%;
+  }
+
+  .habitat-buttons {
+    flex-flow: column wrap;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn, .button-container {
+    width: 100%;
+  }
+
+
+}
